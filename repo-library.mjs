@@ -12,7 +12,7 @@ import { existsSync, readFileSync, realpathSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-export const EDITION = '1.0.0'
+export const EDITION = '2.0.0'
 export const SPEC_URL = 'https://github.com/kingdun3284/repo-library'
 export const BEGIN = '<!-- repo-library:begin -->'
 export const END = '<!-- repo-library:end -->'
@@ -92,7 +92,7 @@ export function rules(command) {
     '- Start every document under `docs/` and every `AGENTS.md` below the root, except collection items, with a cover: front matter with `read-when` and, only for a temporary document, `until`. Record nothing in a cover that git already records.',
     '- Write documents in the language this file declares and use the names it defines. Keep identifiers, commands, paths and quoted interface text as they are.',
     '- Track pending work and open questions in the issue tracker, never in documents or agent memory.',
-    '- When the project owner states a rule for this repository, record it in the document that owns the subject, in the same change, not in agent memory.',
+    '- When the project owner states a rule for this repository, propose recording it in the document that owns the subject, and record it there once the owner approves; never keep it in agent memory.',
     `- After adding, moving or deleting a document or changing a cover, run \`${command} write\`. Never edit this block by hand.`,
   ]
 }

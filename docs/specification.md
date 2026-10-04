@@ -94,7 +94,9 @@ The catalog stays in the entry file because an agent does not look for documents
 
 - Create a document when a subject has rules or reference that no document covers; give it a cover and regenerate the
   catalog.
-- When the project owner states a rule, record it in the document that owns the subject, in the same change.
+- When the project owner states a rule for the repository, propose recording it in the document that owns the subject,
+  and record it there once the owner approves. An owner's own working agreement may require that approval; a rule is
+  never kept in agent memory instead.
 - Record work deferred out of a change, and questions waiting for a decision, as issues.
 - Delete a document when nothing in it is current, or when its `until` holds.
 - When a task shows that a `read-when` misled or failed to trigger, correct the cover in the same change.
